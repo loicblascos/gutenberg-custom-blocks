@@ -1,0 +1,177 @@
+// Frontend CSS
+.gcb-post {
+
+	position: relative;
+    margin: 0 0 1em;
+    padding: 1em;
+    border: 0.1em solid #ddd;
+	border-radius: 0.6em;
+	font-size: 16px;
+
+	.gcb-media-holder {
+
+		position: relative;
+		background: #f5f6fa;
+
+		img {
+
+			position: relative;
+			display: block;
+			width: 100%;
+			margin: 0;
+
+		}
+
+	}
+
+	.gcb-content-holder {
+
+		position: relative;
+		padding: 1em;
+		text-align: left;
+
+		a {
+			text-decoration: none;
+		}
+
+		.gcb-post-title {
+
+			margin: 0;
+
+			a {
+
+				position: relative;
+				display: block;
+				color: #444;
+				font-size: 1.4em;
+				font-weight: 600;
+				line-height: 1.4em;
+				text-decoration: none;
+				transition: color 0.3s;
+
+				&:hover {
+					color: #00a0d2;
+				}
+
+			}
+
+		}
+
+		.gcb-post-date,
+		.gcb-post-author {
+
+			position: relative;
+			padding: 0.4em 0 0;
+			color: #888;
+			font-size: 0.9em;
+			font-style: italic;
+			line-height: 0.9em;
+
+		}
+
+
+
+		.gcb-post-terms {
+
+			margin: 0 0 0.4em;
+			padding: 0;
+
+			li {
+
+				display: inline;
+				list-style: none;
+				padding: 0.4em 0.8em;
+				margin: 0 0.2em 0.4em 0.2em;
+				border: 0.1em solid;
+				color: #0073aa;
+				border-radius: 0.4em;
+				font-size: 0.85em;
+				line-height: 0.85em;
+				transition: color .3s;
+
+				&:first-child {
+					margin-left: 0;
+				}
+
+				&:hover {
+					color: #00a0d2;
+				}
+
+			}
+
+		}
+
+		.gcb-post-author,
+		.gcb-post-terms {
+
+			a {
+
+				color: #0073aa;
+
+				&:hover {
+					color: #00a0d2;
+				}
+
+			}
+
+		}
+
+		.gcb-post-excerpt {
+
+			margin: 1em 0;
+
+			p {
+				margin: 0;
+			}
+
+		}
+
+		.gcb-post-readmore {
+
+			display: inline-flex;
+			align-items: center;
+			padding: .4em 1.2em;
+			background: #444;
+			border-radius: 0.4em;
+			color: white;
+			font-size: .9em;
+			text-decoration: none;
+			transition: opacity 0.3s;
+
+			&:hover {
+				opacity: 0.9;
+			}
+		}
+
+	}
+
+}
+
+.gcb-horizontal-layout {
+
+	.gcb-post {
+
+		display: flex;
+
+		.gcb-media-holder {
+
+			flex: 35%;
+
+			img {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				object-fit: cover;
+
+			}
+
+		}
+		.gcb-content-holder {
+			flex: 65%;
+		}
+
+	}
+
+}

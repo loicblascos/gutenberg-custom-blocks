@@ -1,0 +1,5 @@
+{
+  "name": "gutenberg-custom-blocks",
+  "type": "wordpress-plugin",
+  "description": "Custom blocks for Gutenberg"
+}

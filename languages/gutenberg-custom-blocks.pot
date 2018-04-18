@@ -1,0 +1,131 @@
+# Copyright (C) 2018 Loïc Blascos
+# This file is distributed under the same license as the Gutenberg Custom Blocks package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Gutenberg Custom Blocks 1.0.0\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/gutenberg-custom-blocks\n"
+"POT-Creation-Date: 2018-04-18 13:39:33+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: node-wp-i18n 1.1.1\n"
+
+#: blocks/posts/render.php:101 languages/gutenberg-custom-blocks.php:44
+msgid "by"
+msgstr ""
+
+#: blocks/posts/render.php:123 languages/gutenberg-custom-blocks.php:32
+msgid "Read more"
+msgstr ""
+
+#: compat.php:85
+msgid ""
+"Gutenberg Custom Blocks plugin requires at least WordPress 4.9.\n"
+"\t\t\t\tPlease upgrade WordPress before activating the plugin."
+msgstr ""
+
+#: compat.php:96
+msgid ""
+"Gutenberg Custom Blocks plugin requires at least PHP 5.4.\n"
+"\t\t\t\tPlease contact your hosting provider to upgrade your PHP version."
+msgstr ""
+
+#: compat.php:106
+msgid ""
+"Gutenberg Custom Blocks plugin requires files to be built.\n"
+"\t\t\t\tRun <code>npm install</code> to install dependencies\n"
+"\t\t\t\t<code>npm run build</code> to build the files or <code>npm run "
+"dev</code> to build the files and watch for changes."
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Custom blocks for Gutenberg"
+msgstr ""
+
+#: includes/class-template.php:62
+msgid "Gutenberg templates"
+msgstr ""
+
+#: includes/class-template.php:97
+msgid "Add Description..."
+msgstr ""
+
+#: languages/gutenberg-custom-blocks.php:5
+msgid "GCB Meta"
+msgstr ""
+
+#: languages/gutenberg-custom-blocks.php:10
+msgid "Block description"
+msgstr ""
+
+#: languages/gutenberg-custom-blocks.php:13
+msgid "Enter your meta value"
+msgstr ""
+
+#: languages/gutenberg-custom-blocks.php:16
+msgid "GCB Posts"
+msgstr ""
+
+#: languages/gutenberg-custom-blocks.php:19
+msgid "Latest Posts Settings"
+msgstr ""
+
+#: languages/gutenberg-custom-blocks.php:22
+msgid "Horizontal Layout"
+msgstr ""
+
+#: languages/gutenberg-custom-blocks.php:25
+msgid "Display Thumbnail"
+msgstr ""
+
+#: languages/gutenberg-custom-blocks.php:29
+msgid "Block Alignment"
+msgstr ""
+
+#: languages/gutenberg-custom-blocks.php:35
+msgid "Posts"
+msgstr ""
+
+#: languages/gutenberg-custom-blocks.php:38
+msgid "No posts found."
+msgstr ""
+
+#: languages/gutenberg-custom-blocks.php:41
+msgid "(Untitled)"
+msgstr ""
+
+#: languages/gutenberg-custom-blocks.php:47
+msgid "GCB Simple"
+msgstr ""
+
+#: languages/gutenberg-custom-blocks.php:50
+msgid "Appearance"
+msgstr ""
+
+#: languages/gutenberg-custom-blocks.php:53
+msgid "Font Size"
+msgstr ""
+
+#: languages/gutenberg-custom-blocks.php:56
+msgid "Text Color"
+msgstr ""
+
+#: languages/gutenberg-custom-blocks.php:59
+msgid "Background Color"
+msgstr ""
+
+#: languages/gutenberg-custom-blocks.php:62
+msgid "Type your content"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Gutenberg Custom Blocks"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Loïc Blascos"
+msgstr ""
