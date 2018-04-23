@@ -100,9 +100,9 @@ class Blocks {
 				// Editor blocks script.
 				'editor_script' => 'gcb-editor-js',
 				// Editor stylesheet.
-				'editor_style'  => 'gcb-editor',
+				'editor_style'  => 'gcb-editor-css',
 				// Blocks stylesheet.
-				'style'         => 'gcb-blocks',
+				'style'         => 'gcb-blocks-css',
 			];
 
 			// If block is dynamic.
@@ -162,7 +162,7 @@ class Blocks {
 		// Register blocks stylesheet.
 		wp_register_style(
 			// Handle.
-			'gcb-blocks',
+			'gcb-blocks-css',
 			// Register the blocks stylesheet Built with Webpack.
 			GCB_URL . 'assets/style.build.css',
 			// Gutenberg dependency, to include the CSS after it.
@@ -189,7 +189,7 @@ class Blocks {
 		// Register editor stylesheet.
 		wp_register_style(
 			// Handle.
-			'gcb-editor',
+			'gcb-editor-css',
 			// Register the editor stylesheet Built with Webpack.
 			GCB_URL . 'assets/editor.build.css',
 			// Gutenberg dependency, to include the CSS after it.

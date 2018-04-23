@@ -17,7 +17,7 @@ $query = new WP_Query( [
 	'order'          => $attributes['order'],
 	'orderby'        => $attributes['orderby'],
 	'cat'            => $attributes['categories'],
-	'post__not_in'   => [ get_the_ID() ],
+	'post__not_in'   => [ get_queried_object_id() ],
 ] );
 
 if ( ! $query->have_posts() ) {

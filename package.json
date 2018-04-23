@@ -1,7 +1,7 @@
-	{
+{
 	"name": "gutenberg-custom-blocks",
 	"description": "Custom blocks for Gutenberg",
-	"repository": "",
+	"repository": "https://github.com/loicblascos/gutenberg-custom-blocks",
 	"version": "1.0.0",
 	"main": "assets/editor.build.js",
 	"engines": {
