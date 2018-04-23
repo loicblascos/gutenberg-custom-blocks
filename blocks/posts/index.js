@@ -38,7 +38,7 @@ const editBlock = ( props ) => {
 		attributes: {
 			align,
 			order,
-			orderby,
+			orderBy,
 			categories,
 			postsToShow,
 			displayThumb,
@@ -61,12 +61,12 @@ const editBlock = ( props ) => {
 		<InspectorControls key="inspector">
 			<PanelBody title={ __( 'Latest Posts Settings', 'gutenberg-custom-blocks' ) }>
 				<QueryControls
-					{ ...{ order, orderby } }
+					{ ...{ order, orderBy } }
 					numberOfItems={ postsToShow }
 					categoriesList={ get( categoriesList, 'data', {} ) }
 					selectedCategoryId={ categories }
 					onOrderChange={ ( value ) => setAttributes( { order: value } ) }
-					onOrderbyChange={ ( value ) => setAttributes( { orderby: value } ) }
+					onOrderByChange={ ( value ) => setAttributes( { orderBy: value } ) }
 					onCategoryChange={ ( value ) => setAttributes( { categories: '' !== value ? value : 'undefined' } ) }
 					onNumberOfItemsChange={ ( value ) => setAttributes( { postsToShow: value } ) }
 				/>
@@ -122,14 +122,14 @@ export default registerBlockType( 'gcb-blocks/posts', {
 		const {
 			postsToShow,
 			order,
-			orderby,
+			orderBy,
 			categories
 		} = props.attributes;
 
 		const args = stringify( pickBy( {
 			categories,
 			order,
-			orderby,
+			orderby: orderBy,
 			per_page: postsToShow,
 		}, value => ! isUndefined( value ) ) );
 

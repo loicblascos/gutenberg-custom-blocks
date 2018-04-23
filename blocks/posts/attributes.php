@@ -23,7 +23,7 @@ return [
 		'type'    => 'string',
 		'default' => 'desc',
 	],
-	'orderby' => [
+	'orderBy' => [
 		'type'    => 'string',
 		'default' => 'date',
 	],

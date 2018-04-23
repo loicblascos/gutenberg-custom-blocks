@@ -15,7 +15,7 @@ $query = new WP_Query( [
 	'posts_per_page' => $attributes['postsToShow'],
 	'post_status'    => 'publish',
 	'order'          => $attributes['order'],
-	'orderby'        => $attributes['orderby'],
+	'orderby'        => $attributes['orderBy'],
 	'cat'            => $attributes['categories'],
 	'post__not_in'   => [ get_queried_object_id() ],
 ] );

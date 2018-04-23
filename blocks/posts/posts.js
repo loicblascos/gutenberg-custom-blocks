@@ -16,8 +16,6 @@ export default class gcb_posts extends Component {
 
 		const {
             attributes: {
-                order,
-                orderby,
                 categories,
                 postsToShow,
                 displayThumb,
