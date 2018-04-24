@@ -61,7 +61,7 @@ require_once( GCB_PATH . 'includes/class-autoload.php' );
 
 // Class names as strings to prevent parsing errors for PHP inferior to 5.3.
 $blocks   = '\Gutenberg_Custom_Blocks\Includes\Blocks';
-$template = '\Gutenberg_Custom_Blocks\Includes\template';
+$template = '\Gutenberg_Custom_Blocks\Includes\Template';
 
 new $blocks();
 new $template();
