@@ -13,6 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Compatibility class
+ * This class is compatible with minimum PHP requirement of WordPress.
  *
  * @class Gutenberg_Custom_Blocks_Compat
  * @since 1.0.0

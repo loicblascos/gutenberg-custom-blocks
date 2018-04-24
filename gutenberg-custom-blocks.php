@@ -8,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name:  Gutenberg Custom Blocks
  * Description:  Custom blocks for Gutenberg
- * Version:      1.0.1
+ * Version:      1.0.2
  * Author:       Loïc Blascos
  * Text Domain:  gutenberg-custom-blocks
  * Domain Path:  /languages
@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'GCB_VERSION', '1.0.1' );
+define( 'GCB_VERSION', '1.0.2' );
 define( 'GCB_FILE', __FILE__ );
 define( 'GCB_BASE', plugin_basename( __FILE__ ) );
 define( 'GCB_PATH', plugin_dir_path( __FILE__ ) );
@@ -59,6 +59,9 @@ if ( ! $compat ) {
 // Include autoload.
 require_once( GCB_PATH . 'includes/class-autoload.php' );
 
-// Register blocks and template.
-new Gutenberg_Custom_Blocks\Includes\Blocks();
-new Gutenberg_Custom_Blocks\Includes\template();
+// Class names as strings to prevent parsing errors for PHP inferior to 5.3.
+$blocks   = '\Gutenberg_Custom_Blocks\Includes\Blocks';
+$template = '\Gutenberg_Custom_Blocks\Includes\template';
+
+new $blocks();
+new $template();
