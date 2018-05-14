@@ -165,8 +165,8 @@ class Blocks {
 			'gcb-blocks-css',
 			// Register the blocks stylesheet Built with Webpack.
 			GCB_URL . 'assets/style.build.css',
-			// Gutenberg dependency, to include the CSS after it.
-			[ 'wp-blocks' ],
+			// No Gutenberg dependency.
+			[],
 			// To prevent cache issue (can be the plugin version in production).
 			filemtime( GCB_PATH . 'assets/style.build.css' )
 		);

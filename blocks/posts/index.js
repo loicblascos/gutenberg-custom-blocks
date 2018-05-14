@@ -20,12 +20,14 @@ const {
 } = wp.components;
 
 const {
-	InspectorControls,
 	registerBlockType,
-	BlockControls,
-	AlignmentToolbar,
-	BlockAlignmentToolbar,
 } = wp.blocks;
+
+const {
+	BlockAlignmentToolbar,
+	InspectorControls,
+	BlockControls,
+} = wp.editor;
 
 const {
 	decodeEntities,

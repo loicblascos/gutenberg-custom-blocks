@@ -11,14 +11,16 @@ const {
 } = wp.components;
 
 const {
-	RichText,
-	ColorPalette,
-	InspectorControls,
 	registerBlockType,
-	BlockControls,
-	AlignmentToolbar,
-	BlockAlignmentToolbar,
 } = wp.blocks;
+
+const {
+	BlockAlignmentToolbar,
+	InspectorControls,
+	BlockControls,
+	ColorPalette,
+	RichText,
+} = wp.editor;
 
 const EditBlock = ( props ) => {
 

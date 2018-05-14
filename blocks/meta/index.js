@@ -10,9 +10,12 @@ const {
 } = wp.components;
 
 const {
-	InspectorControls,
 	registerBlockType,
 } = wp.blocks;
+
+const {
+	InspectorControls,
+} = wp.editor;
 
 export default registerBlockType( 'gcb-blocks/meta', {
 	// Block title
