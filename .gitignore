@@ -3,4 +3,5 @@ node_modules
 assets
 .gitattributes
 gutenberg-custom-blocks.zip
+languages/gutenberg-custom-blocks.pot
 languages/gutenberg-custom-blocks.php

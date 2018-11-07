@@ -16,11 +16,15 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-register_meta( 'post', 'gcb_metadata', [
-	'show_in_rest' => true,
-	'single' => true,
-	'type' => 'string',
-] );
+register_meta(
+	'post',
+	'gcb_metadata',
+	[
+		'show_in_rest' => true,
+		'single' => true,
+		'type' => 'string',
+	]
+);
 
 return [
 	'gcb_metadata' => [

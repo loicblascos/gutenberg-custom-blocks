@@ -3,7 +3,7 @@ const { Component } = wp.element;
 
 const {
 	decodeEntities,
-} = wp.utils;
+} = wp.htmlEntities;
 
 const {
     Spinner,
@@ -15,16 +15,16 @@ export default class gcb_posts extends Component {
 	render() {
 
 		const {
+            posts,
+            isSelected,
             attributes: {
                 categories,
                 postsToShow,
                 displayThumb,
                 horizontal
-            },
-            isSelected,
+            }
         } = this.props;
 
-        const posts = this.props.posts.data;
         const hasPosts = Array.isArray( posts ) && posts.length;
 
         if ( ! hasPosts ) {
@@ -56,9 +56,9 @@ export default class gcb_posts extends Component {
                             <div class="gcb-media-holder">
                                 <a href={ post.link } target="_blank">
                                     <img
-                                        src={ post._embedded['wp:featuredmedia'][0].media_details.sizes.medium_large.source_url }
-                                        height={ post._embedded['wp:featuredmedia'][0].media_details.sizes.medium_large.height }
-                                        width={ post._embedded['wp:featuredmedia'][0].media_details.sizes.medium_large.width }
+                                        src={ post._embedded['wp:featuredmedia'][0].source_url }
+                                        height={ post._embedded['wp:featuredmedia'][0].height }
+                                        width={ post._embedded['wp:featuredmedia'][0].width }
                                         alt={ decodeEntities( post._embedded['wp:featuredmedia'][0].alt_text ) }
                                     />
                                 </a>

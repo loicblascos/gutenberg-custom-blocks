@@ -1,5 +1,17 @@
 {
-  "name": "gutenberg-custom-blocks",
-  "type": "wordpress-plugin",
-  "description": "Custom blocks for Gutenberg"
+	"name": "gutenberg-custom-blocks",
+	"description": "Custom blocks for Gutenberg",
+	"type": "wordpress-plugin",
+	"license": "GPL2+",
+	"authors": [
+		{
+			"name": "Loïc Blascos"
+		}
+	],
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"require": {
+		"php": "^5.4"
+	}
 }
+

@@ -39,8 +39,8 @@ class Blocks {
 	public function __construct() {
 
 		add_action( 'init', [ $this, 'register_blocks' ] );
-		add_action( 'enqueue_block_assets', [ $this, 'block_assets' ] );
-		add_action( 'enqueue_block_editor_assets', [ $this, 'editor_assets' ] );
+		add_action( 'init', [ $this, 'block_assets' ] );
+		add_action( 'init', [ $this, 'editor_assets' ] );
 
 	}
 

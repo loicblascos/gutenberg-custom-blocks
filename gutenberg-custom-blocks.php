@@ -8,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name:  Gutenberg Custom Blocks
  * Description:  Custom blocks for Gutenberg
- * Version:      1.0.2
+ * Version:      1.1.0
  * Author:       Loïc Blascos
  * Text Domain:  gutenberg-custom-blocks
  * Domain Path:  /languages
@@ -21,7 +21,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'GCB_VERSION', '1.0.2' );
+define( 'GCB_VERSION', '1.1.0' );
+define( 'GCB_NAME', 'Gutenberg Custom Blocks' );
 define( 'GCB_FILE', __FILE__ );
 define( 'GCB_BASE', plugin_basename( __FILE__ ) );
 define( 'GCB_PATH', plugin_dir_path( __FILE__ ) );
@@ -40,28 +41,19 @@ function gutenberg_custom_blocks_textdomain() {
 		basename( dirname( __FILE__ ) ) . '/languages'
 	);
 
-	// Translate plugin description.
+	// Translate Plugin Description.
 	__( 'Custom blocks for Gutenberg', 'gutenberg-custom-blocks' );
 
 }
-
 add_action( 'plugins_loaded', 'gutenberg_custom_blocks_textdomain' );
 
-// Include compatibility class.
-$compat = require_once( GCB_PATH . 'compat.php' );
+// Compatibility class.
+$compat = require_once GCB_PATH . 'compatibility.php';
 
 // If compatibility issue.
-if ( ! $compat ) {
-	// Stop execution of the plugin.
+if ( ! $compat->check() ) {
 	return;
 }
 
-// Include autoload.
-require_once( GCB_PATH . 'includes/class-autoload.php' );
-
-// Class names as strings to prevent parsing errors for PHP inferior to 5.3.
-$blocks   = '\Gutenberg_Custom_Blocks\Includes\Blocks';
-$template = '\Gutenberg_Custom_Blocks\Includes\Template';
-
-new $blocks();
-new $template();
+// Initialize plugin.
+require_once GCB_PATH . 'initialize.php';

@@ -12,7 +12,7 @@ That's it! All the rest will be built on `npm run dev`.
 
 ```
 WordPress 4.9
-Gutenberg 2.8
+Gutenberg 4.0
 PHP 5.4
 Node 8+
 ```

@@ -2,9 +2,6 @@ import style from './style.scss';
 import editor from './editor.scss';
 
 import Posts from './posts';
-
-// To prevent overriding global '_' underscore
-import get from 'lodash/get';
 import isUndefined from 'lodash/isUndefined';
 import pickBy from 'lodash/pickBy';
 
@@ -13,8 +10,11 @@ import { stringify } from 'querystringify';
 const { __ } = wp.i18n;
 
 const {
+	withSelect,
+} = wp.data;
+
+const {
 	PanelBody,
-	withAPIData,
 	ToggleControl,
 	QueryControls,
 } = wp.components;
@@ -28,11 +28,6 @@ const {
 	InspectorControls,
 	BlockControls,
 } = wp.editor;
-
-const {
-	decodeEntities,
-} = wp.utils;
-
 
 const editBlock = ( props ) => {
 
@@ -65,7 +60,7 @@ const editBlock = ( props ) => {
 				<QueryControls
 					{ ...{ order, orderBy } }
 					numberOfItems={ postsToShow }
-					categoriesList={ get( categoriesList, 'data', {} ) }
+					categoriesList={ categoriesList }
 					selectedCategoryId={ categories }
 					onOrderChange={ ( value ) => setAttributes( { order: value } ) }
 					onOrderByChange={ ( value ) => setAttributes( { orderBy: value } ) }
@@ -119,25 +114,25 @@ export default registerBlockType( 'gcb-blocks/posts', {
 
 	},
 	// Function callback of edit property (to render block and block controls in Gutenberg editor)
-	edit: withAPIData( ( props ) => {
+	edit: withSelect( ( select, props ) => {
 
-		const {
-			postsToShow,
-			order,
-			orderBy,
-			categories
-		} = props.attributes;
-
-		const args = stringify( pickBy( {
+		const {	postsToShow, order, orderBy, categories } = props.attributes;
+		const { getEntityRecords } = select( 'core' );
+		const postsQuery = pickBy( {
 			categories,
 			order,
 			orderby: orderBy,
 			per_page: postsToShow,
-		}, value => ! isUndefined( value ) ) );
+			_embed: true,
+		}, ( value ) => ! isUndefined( value ) );
+
+		const categoriesQuery = {
+			per_page: 100,
+		};
 
 		return {
-			posts: '/wp/v2/posts?_embed' + ( args ? '&' + args : '' ),
-			categoriesList: '/wp/v2/categories?per_page=100&_fields{id,name,parent}'
+			posts: getEntityRecords( 'postType', 'post', postsQuery ),
+			categoriesList: getEntityRecords( 'taxonomy', 'category', categoriesQuery ),
 		};
 
 	} )( editBlock ),
